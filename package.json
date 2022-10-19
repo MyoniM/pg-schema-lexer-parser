@@ -1,0 +1,20 @@
+{
+  "name": "schema-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate-grammar": "nearleyc schema.ne -o schemaGrammar.js",
+    "parse": "node parse.js input.txt",
+    "generate": "node generate.js input.ast",
+    "execute": "npm run generate-grammar && npm run parse && npm run generate && node input.js",
+    "run-all": "node run.js input.txt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moo": "^0.5.2",
+    "nearley": "^2.20.1"
+  }
+}
